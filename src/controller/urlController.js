@@ -23,7 +23,7 @@ const createShortUrl = async function (req, res) {
         let urlCode = shortId.generate()
         req.body.urlCode = urlCode
         
-        let shortUrl = "http://localhost:3000/" + urlCode
+        let shortUrl = "https://shortlinxback.vercel.app/" + urlCode
         req.body.shortUrl = shortUrl
         
         let createdShortUrl = await urlModel.create(req.body)
