@@ -9,7 +9,7 @@ require('dotenv').config();
 
 app.use(bodyParser.json());
 app.use(cors({
-  origin:'https://shortlinxfront.vercel.app/'// Replace with your actual frontend port
+  origin:'https://shortlinxfront.vercel.app'// Replace with your actual frontend port
 }));
 app.use(bodyParser.urlencoded({ extended: true }));
 
