@@ -19,8 +19,6 @@ const createShortUrl = async function (req, res) {
             return res.status(400).send({ status: false, msg: "enter valid url" })
         }
 
-        let urlcheck = await urlModel.findOne({ longUrl: url }).select({ createdAt: 0, updatedAt: 0, __v: 0, _id: 0 })
-        if (urlcheck) return res.status(200).send({ status: true, data: urlcheck })
                
         let urlCode = shortId.generate()
         req.body.urlCode = urlCode
