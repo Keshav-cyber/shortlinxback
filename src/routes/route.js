@@ -5,6 +5,7 @@ const urlController = require('../controller/urlController')
 
 router.post('/url/shorten', urlController.createShortUrl)
 router.get('/:urlCode', urlController.getUrl)
+router.get('/check/:customAlias', urlController.checkCustomAlias)
 router.all('*', (req, res) => {res.status(404).send({status : false, message:"No Page Found !!"})})
 
 
